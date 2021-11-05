@@ -11,6 +11,11 @@ class Pagination {
         return items.slice(itemsToShow - this.itemsPerPage, itemsToShow);
     }
 
+    numberOfPages() {
+        let numberOfPages = this.items.length / this.itemsPerPage;
+        return Math.ceil(numberOfPages);
+    }
+
 }
 
 module.exports = { Pagination }
