@@ -11,7 +11,7 @@ class Pagination {
         return items.slice(itemsToShow - this.itemsPerPage, itemsToShow);
     }
 
-    numberOfPages() {
+    get numberOfPages() {
         let numberOfPages = this.items.length / this.itemsPerPage;
         return Math.ceil(numberOfPages);
     }
